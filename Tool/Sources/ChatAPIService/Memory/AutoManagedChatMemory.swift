@@ -10,10 +10,10 @@ public enum AutoManagedChatMemoryActor: GlobalActor {
 }
 
 protocol AutoManagedChatMemoryStrategy {
-    func countToken(_ message: ChatMessage) async -> Int
+            func countToken(_ message: ChatMessage) async 
 }
 
-/// A memory that automatically manages the history according to max tokens and max message count.
+/// A memory that automatically manages the history according to no max tokens and no max message count.
 public actor AutoManagedChatMemory: ChatMemory {
     public struct ComposableMessages {
         public var systemPromptMessage: ChatMessage
